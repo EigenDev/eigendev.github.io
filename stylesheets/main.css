@@ -37,7 +37,6 @@ body,html{margin:0;padding:0;}
   right: 0;
   bottom: -100px;
   left: 0;
-  background-attachment: fixed;
 
   transform: translateZ(-1px) scale(1.5);
   background-size: 100% auto;
@@ -48,9 +47,19 @@ body,html{margin:0;padding:0;}
   background: white;
 }
 .bg1::after {
-  background-image: url('../jet_2048_infinity_linknyc.png') no-repeat center / cover;
+  background-image: url('../jet_2048_infinity_linknyc.png');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg2::after {
-  background-image: url('../jet_2048_emergency_bipolar.png') no-repeat center / cover;
+  background-image: url('../jet_2048_emergency_bipolar.png');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
