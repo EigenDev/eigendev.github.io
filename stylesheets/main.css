@@ -37,7 +37,8 @@ body,html{margin:0;padding:0;}
   right: 0;
   bottom: -100px;
   left: 0;
-  
+  background-attachment: fixed;
+
   transform: translateZ(-1px) scale(1.5);
   background-size: 100% auto;
   z-index: -1;
@@ -47,9 +48,9 @@ body,html{margin:0;padding:0;}
   background: white;
 }
 .bg1::after {
-  background-image: url('../jet_2048_infinity_linknyc.png');
+  background-image: url('../jet_2048_infinity_linknyc.png') no-repeat center / cover;
 }
 
 .bg2::after {
-  background-image: url('../jet_2048_emergency_bipolar.png');
+  background-image: url('../jet_2048_emergency_bipolar.png') no-repeat center / cover;
 }
