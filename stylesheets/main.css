@@ -15,7 +15,7 @@
   text-shadow: 0 0 5px #000;
 }
 
-.parallax::after {
+/* .parallax::after {
   content: " ";
   position: absolute;
   top: 0;
@@ -24,6 +24,19 @@
   left: 0;
   transform: translateZ(-1px) scale(1.5);
   background-size: 100%;
+  z-index: -1;
+} */
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: -100px;
+  right: 0;
+  bottom: -100px;
+  left: 0;
+  
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100% auto;
   z-index: -1;
 }
 
