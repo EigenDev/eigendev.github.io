@@ -117,6 +117,7 @@ li {
   color: #fff;
   overflow: hidden;
   position: fixed;
+  width: 99%;
   top: 0;
   z-index: 2;
  }
