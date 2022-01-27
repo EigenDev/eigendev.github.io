@@ -18,6 +18,14 @@ body,html{margin:0;padding:0;}
   text-shadow: 0 0 5px #000;
 }
 
+.section-heading {
+  text-align:center;
+  color:#102C4E;
+  margin-top: 150px;
+  margin-bottom:70px;
+  font-size: 35px;
+}
+
 /* .parallax::after {
   content: " ";
   position: absolute;
