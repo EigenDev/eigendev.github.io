@@ -82,6 +82,7 @@ li {
   background-color: teal;
   color: #fff;
   position: fixed;
+  width: 100%;
  }
  .nav-links a {
   color: #fff;
