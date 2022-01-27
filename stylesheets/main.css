@@ -33,9 +33,9 @@ body,html{margin:0;padding:0;}
 .parallax::after {
   content: " ";
   position: absolute;
-  top: 0;
+  top: -100px;
   right: 0;
-  bottom: 0;
+  bottom: -100px;
   left: 0;
 
   transform: translateZ(-1px) scale(1.5);
