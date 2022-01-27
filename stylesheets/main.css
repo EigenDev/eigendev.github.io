@@ -81,6 +81,7 @@ li {
   padding: 20px;
   background-color: teal;
   color: #fff;
+  position: fixed;
  }
  .nav-links a {
   color: #fff;
