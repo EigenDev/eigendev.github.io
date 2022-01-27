@@ -72,8 +72,7 @@ a {
 li {
  list-style: none;
 }
-
-/* NAVBAR STYLING STARTS */
+ /* NAVBAR STYLING STARTS */
 .navbar {
   display: flex;
   align-items: center;
@@ -81,8 +80,7 @@ li {
   padding: 20px;
   background-color: teal;
   color: #fff;
-  position: fixed;
-  width: 100%;
+  overflow: hidden;
  }
  .nav-links a {
   color: #fff;
