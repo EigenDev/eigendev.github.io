@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+Hello, I am some random front matter for Marcus DuPont.

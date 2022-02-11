@@ -1,0 +1,108 @@
+<style>
+/* NAVBAR STYLING STARTS */
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+background-color: black;
+color: #fff;
+overflow: hidden;
+position: fixed;
+width: 99%;
+top: 0;
+z-index: 2;
+}
+.nav-links a {
+color: whitesmoke;
+}
+/* LOGO */
+.logo {
+font-size: 32px;
+color: whitesmoke
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: whitesmoke;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: whitesmoke;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+  /* NAVBAR MENU */
+  .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  }
+  /* .menu li:hover {
+  /*text-decoration: underline;*/
+  /* background-color: grey; */
+  /* border-radius: 5px;
+  transition: 0.3s ease;
+  } */ 
+
+  .menu li {
+  padding: 5px;
+  color: whitesmoke;
+  }
+  /* DROPDOWN MENU */
+  .services {
+  position: relative; 
+  }
+  .dropdown {
+  background-color: rgb(1, 139, 139);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+  }
+  .dropdown li + li {
+  margin-top: 10px;
+  }
+  .dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+  }
+  .dropdown li:hover {
+  background-color: #4c9e9e;
+  }
+  .services:hover .dropdown {
+  display: block;
+  }
+
+  .main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+</style>
+
+<nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">MARCUS DUPONT</div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+    <!-- NAVIGATION MENUS -->
+    <div class="menu">
+    <li><a href="#about" class="hover-underline-animation">ABOUT ME</a></li>
+    <li><a href="/assets/docs/dupont_biosketch.pdf" class="hover-underline-animation">CV</a></li>
+    <li>md4469[at]nyu[dot]edu</li>
+    </div>
+    </ul>
+ </nav>
