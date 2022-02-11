@@ -99,4 +99,10 @@ body .content {
 
 .ct-icon_box {
   margin-bottom: 3rem;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+}
+
+.description {
+  font-size: 18px;
 }
