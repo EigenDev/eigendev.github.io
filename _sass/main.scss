@@ -105,6 +105,7 @@ body .content {
 
 .description {
   font-size: 18px;
+  width: 100%;
 }
 
 .card-title {
@@ -195,6 +196,21 @@ a.btn:active {
     margin: 0.4em auto;
   }
 }
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+@media screen and (max-width: 450px) {
+  .alignright {
+      float: left;
+  }
+}
+
+.bolded { font-weight: bold; }
 
 .footer {
   padding: 10px;
