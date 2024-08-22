@@ -187,9 +187,14 @@ layout: default
 <footer>
 <!-- Copyright -->
 <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-  <p class="text-reset fw-bold"">© 2023 Copyright: Marcus DuPont</p>
+  <p class="text-reset fw-bold"">Copyright © <span id="spanYear"></span>span>: Marcus DuPont</p>
 </div>
 <!-- Copyright -->
+ <script>
+  var spanYear = document.getElementById('spanYear');
+  var d = new Date();
+  spanYear.innerHTML = d.getFullYear();
+</script>
 </footer>
 </section>
 
