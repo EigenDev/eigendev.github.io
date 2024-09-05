@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Marcus DuPont
-email: md4469@nyu.edu
+email: marcus.duponr@princeton.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Personal website for computational astrophysicist, Marcus DuPont
 domain: eigendev.github.io
