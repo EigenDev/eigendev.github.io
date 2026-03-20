@@ -462,10 +462,10 @@ video {
   text-align: left;
 }
 
-/* Timeline Styling - Horizontal Scroll */
+/* Timeline Styling - Horizontal */
 .timeline-scroll-wrapper {
   overflow-x: auto;
-  padding: 1.5rem 0 1rem;
+  padding: 1rem 0;
   -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
@@ -483,15 +483,14 @@ video {
 
 .timeline-horizontal {
   display: flex;
-  gap: 2rem;
   min-width: max-content;
   position: relative;
-  padding: 2.5rem 1rem 1rem;
+  padding: 0 1rem;
 }
 
 .timeline-line {
   position: absolute;
-  top: 2.5rem;
+  top: 8px;
   left: 1rem;
   right: 1rem;
   height: 3px;
@@ -505,7 +504,8 @@ video {
   align-items: center;
   position: relative;
   z-index: 1;
-  min-width: 200px;
+  min-width: 160px;
+  padding: 0 1rem;
 }
 
 .timeline-node {
@@ -514,10 +514,9 @@ video {
   border-radius: 50%;
   background: white;
   border: 3px solid teal;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
   flex-shrink: 0;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 
 .timeline-item:hover .timeline-node {
@@ -526,31 +525,28 @@ video {
 }
 
 .timeline-card {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 1.5rem;
   text-align: center;
+  padding-top: 0.75rem;
 }
 
 .timeline-year {
   font-weight: 700;
   color: teal;
-  font-size: 1.125rem;
-  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
 }
 
 .timeline-title {
   font-weight: 600;
   color: #1f2937;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
   line-height: 1.3;
 }
 
 .timeline-location {
   color: #6b7280;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
@@ -586,14 +582,13 @@ video {
   .timeline-horizontal {
     flex-direction: column;
     min-width: auto;
-    padding: 0 1rem 1rem 2.5rem;
-    gap: 1.5rem;
+    padding: 0 0 0 1.5rem;
   }
 
   .timeline-line {
     top: 0;
     bottom: 0;
-    left: 2rem;
+    left: 1.5rem;
     right: auto;
     width: 3px;
     height: auto;
@@ -604,16 +599,16 @@ video {
     flex-direction: row;
     align-items: flex-start;
     min-width: auto;
+    padding: 0.75rem 0;
   }
 
   .timeline-node {
-    margin-bottom: 0;
+    margin-top: 0.25rem;
     margin-right: 1rem;
-    margin-top: 1.25rem;
   }
 
   .timeline-card {
-    flex: 1;
     text-align: left;
+    padding-top: 0;
   }
 }
