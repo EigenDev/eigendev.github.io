@@ -531,31 +531,6 @@ video {
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.timeline-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, teal, #20b2aa);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.timeline-item:hover .timeline-card {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  border-color: teal;
-}
-
-.timeline-item:hover .timeline-card::before {
-  opacity: 1;
 }
 
 .timeline-year {
