@@ -439,7 +439,7 @@ video {
 }
 
 .publication-title {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   line-height: 1.4;
@@ -452,7 +452,7 @@ video {
 }
 
 .publication-authors {
-  font-size: 0.95rem;
+  font-size: 1.0625rem;
   color: #6b7280;
   margin-bottom: 0.75rem;
   text-align: left;
@@ -463,6 +463,9 @@ video {
   position: relative;
   padding-left: 2rem;
   margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .timeline::before {
@@ -496,20 +499,20 @@ video {
 .timeline-year {
   font-weight: 700;
   color: teal;
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-title {
   font-weight: 600;
   color: #1f2937;
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-location {
   color: #6b7280;
-  font-size: 0.95rem;
+  font-size: 1.0625rem;
 }
 
 /* Mobile Responsive Adjustments */
