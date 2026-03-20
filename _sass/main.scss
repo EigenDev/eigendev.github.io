@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
 body .hero {
   position: fixed;
   z-index: 1;
@@ -26,11 +39,13 @@ body .hero h1 {
   font-family: "Roboto Condensed", sans-serif;
   color: white;
   text-align: center;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
   max-width: 25rem;
   margin: 30vh auto 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 body .content {
   position: absolute;
@@ -43,8 +58,38 @@ body .content {
   margin-bottom: 10vh;
 }
 
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+TT, code, .code-name {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
 .ct_icon_box {
   margin-bottom: 50px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .ct_icon_box_section {
@@ -57,8 +102,7 @@ body .content {
 }
 
 .ct-section_header h2 {
-  font-size: 65px;
-  font-size: 6.5rem;
+  font-size: clamp(2.5rem, 5vw, 6.5rem);
   color: #291b07;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
@@ -66,16 +110,14 @@ body .content {
 }
 
 .ct-section_header.ct-section_header--type2 h2 {
-  font-size: 50px;
-  font-size: 5rem;
+  font-size: clamp(2rem, 4vw, 5rem);
   padding-bottom: 17px;
   padding-bottom: 1.7rem;
   font-family: "Roboto Condensed", sans-serif;
 }
 
 .ct-section_header.ct-section_header--type2 .ct-section_header-description {
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 2vw, 1.8rem);
   color: #2e2e2e;
   font-weight: 400;
   padding-bottom: 5px;
@@ -85,13 +127,12 @@ body .content {
 }
 
 .ct-section_header.ct-section_header--type2 .ct-section_header-separator {
-  background-color: teal;
+  background: linear-gradient(90deg, transparent, teal, transparent);
 }
 
 .ct-section_header-separator {
-  background-color: #924399;
-  height: 2px;
-  height: 0.2rem;
+  background: linear-gradient(90deg, transparent, #924399, transparent);
+  height: 3px;
   display: inline-block;
   width: 171px;
   width: 17.1rem;
@@ -104,19 +145,21 @@ body .content {
 }
 
 .description {
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+  color: #374151;
 }
 
 .code-name {
   text-decoration: none;
   border-bottom: #EA215A 0.125em solid;
-  color: inherit; 
-  font-family: monospace;
+  color: inherit;
+  font-family: 'JetBrains Mono', monospace;
   // letter-spacing: .17em;
 }
 
 .code-name:hover {
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
 }
 
@@ -129,12 +172,38 @@ body .content {
 }
 
 .card {
-  padding: 5px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, teal, #20b2aa);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 .card:hover {
-  box-shadow: 0 40px 60px -20px rgba(12, 5, 62, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(12, 5, 62, 0.2);
   z-index: 100;
 }
+
+.card:hover::before {
+  opacity: 1;
+}
+
 .card:hover .card-title {
   color: #4e22d0;
 }
@@ -182,7 +251,8 @@ a.btn {
   font-weight: 400;
   color: teal;
   text-align: center;
-  transition: all 0.15s;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
 }
 
 a.btn i {
@@ -197,10 +267,13 @@ a.btn:hover {
   color: whitesmoke;
   border-color: white;
   background-color: teal;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
 }
 a.btn:active {
   color: whitesmoke;
   border-color: #bbbbbb;
+  transform: scale(0.95);
 }
 @media all and (max-width: 30em) {
   a.btn {
@@ -237,4 +310,237 @@ video {
   object-fit: cover;
   height: 60%;
   width:  80%;
+}
+
+/* Badge styling for preprint indicators */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.badge-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Year Badge on Publication Cards */
+.year-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: teal;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+/* Venue Badge */
+.venue-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #f3f4f6;
+  color: #374151;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+}
+
+.publication-meta {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Research Keywords Pills */
+.research-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.keyword-pill {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #008b8b, #20b2aa);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.keyword-pill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 139, 139, 0.3);
+}
+
+/* Grid Layout for Publications */
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.publication-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: teal;
+}
+
+.publication-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, teal, #20b2aa);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 12px 0 0 12px;
+}
+
+.publication-card:hover::before {
+  opacity: 1;
+}
+
+.publication-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.publication-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  color: #1f2937;
+  text-align: left;
+}
+
+.publication-card:hover .publication-title {
+  color: #4e22d0;
+}
+
+.publication-authors {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, teal, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: teal;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px teal;
+}
+
+.timeline-year {
+  font-weight: 700;
+  color: teal;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-location {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .ct-section_header h2 {
+    font-size: 2.5rem;
+  }
+
+  .research-keywords {
+    gap: 0.5rem;
+  }
+
+  .keyword-pill {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .publications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item::before {
+    left: -2rem;
+  }
 }

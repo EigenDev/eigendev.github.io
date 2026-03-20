@@ -24,15 +24,27 @@ layout: default
             <div class="media-body">
               <h3 class="col-md-3 media-heading">Research Interests</h3>
               <div class="col-lg-9 description">
-                My main area of study is astrophysical transients.
-                More specifically, I explore gas dynamics of cataclysmic explosions
-                such as supernovae (SNe), gamma-ray bursts (GRBs), X-ray flashes (XRFs), and Fast Blue
-                Optical Transients (FBOTs). I study these by means of a three-dimensional special relativistic
-                hydro code entitled <TT>SIMBI</TT> that I wrote to compile on CPUs as well as NVidia and AMD GPUs.
-                I want to use this code to intensively study the conditions
-                predating stellar death which involve components like strong shock waves, ultra-relativistic speeds,
-                and magnetic fields. Ultimately, I am interested in proposing self-consistent models that constrain
-                the main ingredients to these catastrophic events.
+                My research focuses on understanding the physics of astrophysical transients through computational modeling.
+                I explore the gas dynamics of cataclysmic explosions such as supernovae (SNe), gamma-ray bursts (GRBs),
+                and Fast Blue Optical Transients (FBOTs) using <TT>SIMBI</TT>, a three-dimensional special relativistic
+                hydrodynamics code I developed that runs on CPUs as well as NVidia and AMD GPUs.
+                Currently, I am particularly interested in <strong>accretion problems</strong>, <strong>dynamical systems</strong>,
+                and the physics of <strong>bow shocks</strong>—especially how these phenomena interact in extreme environments
+                involving ultra-relativistic speeds, strong shocks, and magnetic fields. My work combines numerical simulations
+                with analytical theory to develop self-consistent models that constrain the fundamental processes driving
+                these catastrophic events, from the conditions preceding stellar death to the complex dynamics of matter
+                in extreme gravitational and electromagnetic fields.
+                <div class="research-keywords">
+                  <span class="keyword-pill">Astrophysical Transients</span>
+                  <span class="keyword-pill">Accretion Physics</span>
+                  <span class="keyword-pill">Dynamical Systems</span>
+                  <span class="keyword-pill">Bow Shocks</span>
+                  <span class="keyword-pill">Special Relativity</span>
+                  <span class="keyword-pill">Hydrodynamics</span>
+                  <span class="keyword-pill">GPU Computing</span>
+                  <span class="keyword-pill">Supernovae</span>
+                  <span class="keyword-pill">Gamma-Ray Bursts</span>
+                </div>
               </div>
             </div>
           </div>
@@ -42,89 +54,24 @@ layout: default
         <div class="col">
           <div class="ct-icon_box media">
             <div class="media-body">
-              <h3 class="col-lg-3 col-md-3 media-heading">Publications</h3>
-              <div class="col-lg-9 col-md-9 container">
-                <div class="col-md-6 col-sm-6">
-                  <div class="card text-center">
-                    <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad66d2" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title description">Did GW170817 Leave Behind a NS?</h5>
-                        <p class="card-text">M.DuPont, A.MacFadyen</p>
+              <h3 class="col-md-3 media-heading">Publications</h3>
+              <div class="col-lg-12 col-md-12">
+                <div class="publications-grid">
+                  {% for pub in site.data.publications %}
+                  <div class="publication-card">
+                    <span class="year-badge">{{ pub.year }}</span>
+                    <a href="{{ pub.url }}" target="_blank" class="publication-link">
+                      <h5 class="publication-title">{{ pub.short_title }}</h5>
+                      <p class="publication-authors">{{ pub.authors }}</p>
+                      <div class="publication-meta">
+                        <span class="venue-badge">{{ pub.venue }}</span>
+                        {% if pub.status == "preprint" %}
+                        <span class="badge badge-secondary">Preprint</span>
+                        {% endif %}
                       </div>
                     </a>
                   </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="card text-center">
-                    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad5adc" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title description">Strong Bow Shocks</h5>
-                        <p class="card-text">M.DuPont, A.Gruzinov, A.MacFadyen</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="card text-center">
-                    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad284e" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title description">Explosions in Roche-Lobe Distorted Stars</h5>
-                        <p class="card-text">M.DuPont, A.MacFadyen, S.E. de Mink</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="card text-center">
-                    <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad132c" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title description">Stars Bisected By Relativistic Blades</h5>
-                        <p class="card-text">M.DuPont, A.MacFadyen</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="card text-center">
-                    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/acffbc" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title description">On The Theory of Ring Afterglows</h5>
-                        <p class="card-text">M.DuPont, A.MacFadyen, R.Sari</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="card text-center">
-                    <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ac6ded" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title description">Ellipsars: Ring-like explosions from flattened stars</h5>
-                        <p class="card-text">M.DuPont, A.MacFadyen, J.Zrake</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="card text-center">
-                    <div class="card-body">
-                      <a href="https://www.cambridge.org/core/journals/international-journal-of-astrobiology/article/fundamental-physical-and-resource-requirements-for-a-martian-magnetic-shield/600798772F8D2C2898A8F3D4058204A6"
-                        target="_blank">
-                        <h5 class="card-title description">Fundamental Physical and Resource Requirements for a Martian
-                          magnetic shield</h5>
-                        <p class="card-text">M.DuPont, J.W.Murphy</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="card text-center">
-                    <a href="https://arxiv.org/abs/2012.12297" target="_blank">
-                      <div class="card-body">
-                        <h5 class="card-title description">Comparative analyis of the solar wind: Modeling charge-state
-                          distrbutions in the heliosphere</h5>
-                        <p class="card-text">M.DuPont, C.Shen, N.A.Murphy</p>
-                    </a>
-                  </div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
@@ -136,54 +83,55 @@ layout: default
       <div class="col-lg">
         <div class="ct-icon_box media">
           <div class="media-body">
-            <h3 class="col-md-3 col-sm-12 media-heading">Education + Positions</h3>
-            <div class="col-lg-9 col-md-9 container">
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2024 &#8212 Present</p>
-                <p class="alignright">Postdoctoral Researcher, Princeton University</p>
+            <h3 class="col-md-3 media-heading">Education + Positions</h3>
+            <div class="col-lg-9 col-md-9">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-year">2024 — Present</div>
+                  <div class="timeline-title">Postdoctoral Researcher</div>
+                  <div class="timeline-location">Princeton University</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2019 — 2024</div>
+                  <div class="timeline-title">Ph.D., Physics</div>
+                  <div class="timeline-location">New York University</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2016 — 2019</div>
+                  <div class="timeline-title">B.S., Physics and Astrophysics</div>
+                  <div class="timeline-location">Florida State University</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2022 — 2024</div>
+                  <div class="timeline-title">Graduate Fellow</div>
+                  <div class="timeline-location">LSST-DA Data Science Fellowship</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2023</div>
+                  <div class="timeline-title">Graduate Fellow</div>
+                  <div class="timeline-location">Max Planck Institute for Astrophysics</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2022</div>
+                  <div class="timeline-title">Graduate Fellow</div>
+                  <div class="timeline-location">Kavli Institute for Theoretical Physics</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2019</div>
+                  <div class="timeline-title">Research Fellow</div>
+                  <div class="timeline-location">Center for Astrophysics | Harvard & Smithsonian</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2018</div>
+                  <div class="timeline-title">Research Fellow</div>
+                  <div class="timeline-location">Center for Astrophysics | Harvard & Smithsonian</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2017</div>
+                  <div class="timeline-title">Research Fellow</div>
+                  <div class="timeline-location">Center for Astrophysics | Harvard & Smithsonian</div>
+                </div>
               </div>
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2019 &#8212 2024</p>
-                <p class="alignright">Ph.D., Physics, New York University</p>
-              </div>
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2016 &#8212 2019</p>
-                <p class="alignright">B.S., Physics and Astrophysics, Florida State University</p>
-              </div>
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2022 &#8212 2024</p>
-                <p class="alignright">Graduate Fellow, LSST-DA Data Science Fellowship</p>
-              </div>
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2023</p>
-                <p class="alignright">Graduate Fellow, Max Planck Institute for Astrophysics</p>
-              </div>
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2022</p>
-                <p class="alignright">Graduate Fellow, Kavli Institute for Theoretical Physics</p>
-              </div>
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2019</p>
-                <p class="alignright">Research Fellow, Center for Astrophysics | Harvard & Smithsonian</p>
-              </div>
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2018</p>
-                <p class="alignright">Research Fellow, Center for Astrophysics | Harvard & Smithsonian</p>
-              </div>
-              <div style="clear: both;"></div>
-              <div class="ct-icon_box-content description">
-                <p class="alignleft bolded">2017</p>
-                <p class="alignright">Research Fellow, Center for Astrophysics | Harvard & Smithsonian</p>
-              </div>
-              <div style="clear: both;"></div>
             </div>
           </div>
         </div>
