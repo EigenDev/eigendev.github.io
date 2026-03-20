@@ -18,6 +18,7 @@ Usage:
 
 import os
 import sys
+from pathlib import Path
 from typing import Any, Dict, List
 
 import requests
@@ -26,7 +27,11 @@ import yaml
 # Configuration
 ORCID = "0000-0003-3356-880X"
 ADS_API_URL = "https://api.adsabs.harvard.edu/v1/search/query"
-OUTPUT_FILE = "_data/publications.yml"
+
+# determine output path relative to script location
+SCRIPT_DIR = Path(__file__).parent
+PROJECT_ROOT = SCRIPT_DIR.parent
+OUTPUT_FILE = PROJECT_ROOT / "_data" / "publications.yml"
 
 
 def get_ads_api_key() -> str:
@@ -249,9 +254,12 @@ def format_publication(pub: Dict[str, Any], title: str) -> Dict[str, Any]:
 
 
 def save_publications_yaml(
-    publications: List[Dict[str, Any]], output_file: str
+    publications: List[Dict[str, Any]], output_file: Path
 ):
     """Save publications to YAML file."""
+    # ensure directory exists
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+
     try:
         with open(output_file, "w") as f:
             yaml.dump(
