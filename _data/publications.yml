@@ -1,71 +1,76 @@
-- title: "Did GW170817 Leave Behind a Neutron Star?"
-  short_title: "Did GW170817 Leave Behind a NS?"
-  authors: "M.DuPont, A.MacFadyen"
-  year: 2024
-  url: "https://iopscience.iop.org/article/10.3847/2041-8213/ad66d2"
-  venue: "The Astrophysical Journal Letters"
-  status: "published"
-  bibcode: "2024ApJ...971L..29D"
-
-- title: "Strong Bow Shocks: Turbulence and an Exact Self-similar Solution"
-  short_title: "Strong Bow Shocks"
-  authors: "M.DuPont, A.Gruzinov, A.MacFadyen"
-  year: 2024
-  url: "https://iopscience.iop.org/article/10.3847/1538-4357/ad5adc"
-  venue: "The Astrophysical Journal"
-  status: "published"
-  bibcode: "2024ApJ...970...88D"
-
-- title: "Explosions in Roche-Lobe Distorted Stars; Implications for iPTF14hls, AT2018cow, AT2017gfo, and AT2019krl"
-  short_title: "Explosions in Roche-Lobe Distorted Stars"
-  authors: "M.DuPont, A.MacFadyen, S.E.de Mink"
-  year: 2024
-  url: "https://iopscience.iop.org/article/10.3847/1538-4357/ad284e"
-  venue: "The Astrophysical Journal"
-  status: "published"
-  bibcode: "2024ApJ...965..122D"
-
-- title: "Stars Bisected by Relativistic Blades"
-  short_title: "Stars Bisected by Relativistic Blades"
-  authors: "M.DuPont, A.MacFadyen"
-  year: 2024
-  url: "https://iopscience.iop.org/article/10.3847/2041-8213/ad132c"
-  venue: "The Astrophysical Journal Letters"
-  status: "published"
-  bibcode: "2024ApJ...960L...2D"
-
-- title: "On The Theory of Ring Afterglows"
-  short_title: "On The Theory of Ring Afterglows"
-  authors: "M.DuPont, A.MacFadyen, R.Sari"
-  year: 2023
-  url: "https://iopscience.iop.org/article/10.3847/1538-4357/acffbc"
-  venue: "The Astrophysical Journal"
-  status: "published"
-  bibcode: "2023ApJ...958...42D"
-
-- title: "Ellipsars; Ring-like Explosions from Flattened Stars"
-  short_title: "Ellipsars; Ring-like Explosions from Flattened Stars"
-  authors: "M.DuPont, A.MacFadyen, J.Zrake"
-  year: 2022
-  url: "https://iopscience.iop.org/article/10.3847/2041-8213/ac6ded"
-  venue: "The Astrophysical Journal Letters"
-  status: "published"
-  bibcode: "2022ApJ...931L...5D"
-
-- title: "Fundamental Physical and Resource Requirements for a Martian Magnetic Shield"
-  short_title: "Fundamental Physical and Resource Requirements..."
-  authors: "M.DuPont, J.W.Murphy"
-  year: 2021
-  url: "https://www.cambridge.org/core/journals/international-journal-of-astrobiology/article/fundamental-physical-and-resource-requirements-for-a-martian-magnetic-shield/600798772F8D2C2898A8F3D4058204A6"
-  venue: "International Journal of Astrobiology"
-  status: "published"
-  bibcode: "2021IJAsB..20..435D"
-
-- title: "Comparative analysis of the solar wind; Modeling charge state distributions in the heliosphere"
-  short_title: "Comparative analysis of the solar wind..."
-  authors: "M.DuPont, C.Shen, N.A.Murphy"
-  year: 2020
-  url: "https://arxiv.org/abs/2012.12297"
-  venue: "arXiv"
-  status: "preprint"
-  bibcode: "2020arXiv201212297D"
+- title:
+    Did Binary Neutron Star Merger GW170817 Leave Behind a Long-lived Neutron
+    Star?
+  short_title: Did Binary Neutron Star Merger GW170817 Leave Behind a...
+  authors: M.DuPont, A.MacFadyen
+  year: "2024"
+  url: https://doi.org/10.3847/2041-8213/ad66d2
+  venue: The Astrophysical Journal
+  status: published
+  bibcode: 2024ApJ...971L..24D
+- title: "Strong Bow Shocks: Turbulence and an Exact Self-similar Asymptotic"
+  short_title: "Strong Bow Shocks: Turbulence and an Exact Self-similar..."
+  authors: M.DuPont, A.Gruzinov, A.MacFadyen
+  year: "2024"
+  url: https://doi.org/10.3847/1538-4357/ad5adc
+  venue: The Astrophysical Journal
+  status: published
+  bibcode: 2024ApJ...971...34D
+- title: "Explosions in Roche-lobe Distorted Stars: Relativistic Bullets in Binaries"
+  short_title: "Explosions in Roche-lobe Distorted Stars: Relativistic..."
+  authors: M.DuPont, A.MacFadyen, S.de Mink
+  year: "2024"
+  url: https://doi.org/10.3847/1538-4357/ad284e
+  venue: The Astrophysical Journal
+  status: published
+  bibcode: 2024ApJ...964...56D
+- title: Stars Bisected by Relativistic Blades
+  short_title: Stars Bisected by Relativistic Blades
+  authors: M.DuPont, A.MacFadyen
+  year: "2023"
+  url: https://doi.org/10.3847/2041-8213/ad132c
+  venue: The Astrophysical Journal
+  status: published
+  bibcode: 2023ApJ...959L..23D
+- title: On the Theory of Ring Afterglows
+  short_title: On the Theory of Ring Afterglows
+  authors: M.DuPont, A.MacFadyen, R.Sari
+  year: "2023"
+  url: https://doi.org/10.3847/1538-4357/acffbc
+  venue: The Astrophysical Journal
+  status: published
+  bibcode: 2023ApJ...957...29D
+- title: "SIMBI: 3D relativistic gas dynamics code"
+  short_title: "SIMBI: 3D relativistic gas dynamics code"
+  authors: M.DuPont
+  year: "2023"
+  url: https://ui.adsabs.harvard.edu/abs/2023ascl.soft08003D/abstract
+  venue: Astrophysics Source Code Library
+  status: preprint
+  bibcode: 2023ascl.soft08003D
+- title: "Ellipsars: Ring-like Explosions from Flattened Stars"
+  short_title: "Ellipsars: Ring-like Explosions from Flattened Stars"
+  authors: M.DuPont, A.MacFadyen, J.Zrake
+  year: "2022"
+  url: https://doi.org/10.3847/2041-8213/ac6ded
+  venue: The Astrophysical Journal
+  status: published
+  bibcode: 2022ApJ...931L..16D
+- title: Fundamental physical and resource requirements for a Martian magnetic shield
+  short_title: Fundamental physical and resource requirements for a...
+  authors: M.DuPont, J.Murphy
+  year: "2021"
+  url: https://doi.org/10.1017/S1473550421000069
+  venue: International Journal of Astrobiology
+  status: published
+  bibcode: 2021IJAsB..20..215D
+- title:
+    "Comparative Analysis of the Solar Wind: Modeling Charge State Distributions
+    in the Heliosphere"
+  short_title: "Comparative Analysis of the Solar Wind: Modeling Charge..."
+  authors: M.DuPont, C.Shen, N.Murphy
+  year: "2020"
+  url: https://doi.org/10.48550/arXiv.2012.12297
+  venue: arXiv e-prints
+  status: preprint
+  bibcode: 2020arXiv201212297D
