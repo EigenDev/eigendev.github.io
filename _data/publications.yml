@@ -6,6 +6,14 @@
   venue: arXiv e-prints
   status: preprint
   bibcode: 2026arXiv260317999D
+- title: 'Strong Bow Shocks: Turbulence and an Exact Self-similar Asymptotic'
+  short_title: 'Strong Bow Shocks: Turbulence and an Exact Self-similar...'
+  authors: M.DuPont, A.Gruzinov, A.MacFadyen
+  year: '2024'
+  url: https://doi.org/10.3847/1538-4357/ad5adc
+  venue: The Astrophysical Journal
+  status: published
+  bibcode: 2024ApJ...971...34D
 - title: Did Binary Neutron Star Merger GW170817 Leave Behind a Long-lived Neutron
     Star?
   short_title: Did Binary Neutron Star Merger GW170817 Leave Behind a...
@@ -15,14 +23,6 @@
   venue: The Astrophysical Journal
   status: published
   bibcode: 2024ApJ...971L..24D
-- title: 'Strong Bow Shocks: Turbulence and an Exact Self-similar Asymptotic'
-  short_title: 'Strong Bow Shocks: Turbulence and an Exact Self-similar...'
-  authors: M.DuPont, A.Gruzinov, A.MacFadyen
-  year: '2024'
-  url: https://doi.org/10.3847/1538-4357/ad5adc
-  venue: The Astrophysical Journal
-  status: published
-  bibcode: 2024ApJ...971...34D
 - title: 'Explosions in Roche-lobe Distorted Stars: Relativistic Bullets in Binaries'
   short_title: 'Explosions in Roche-lobe Distorted Stars: Relativistic...'
   authors: M.DuPont, A.MacFadyen, S.de Mink
