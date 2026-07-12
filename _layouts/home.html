@@ -1,251 +1,187 @@
 ---
 layout: default
 ---
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-<section class="hero">
-  <h1>Marcus DuPont</h1>
-</section>
-<section class="content">
-  <section class="ct_icon_box_section">
-    <div class="container">
-      <div class="ct-section_header ct-section_header--type2">
-        <h2>About Me</h2>
-        <a href="/assets/docs/dupont_biosketch.pdf" class="btn"><i class="fa fa-scroll fs-20px"></i>CV</a>
-        <a href="https://github.com/EigenDev" class="btn"><i class="fa fa-github fs-20px"></i>GitHub</a>
-        <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3356-880X&sort=date+desc" class="btn"><i
-            class="fa fa-search fs-20px"></i>ADS</a>
-        <div class="ct-section_header-description">Postdoctoral Researcher</div>
-        <div class="clearfix"></div>
-        <div class="ct-section_header-separator"></div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="ct-icon_box media">
-            <div class="media-body">
-              <h3 class="col-md-3 media-heading">Research Interests</h3>
-              <div class="col-lg-9 description">
-                My research focuses on understanding the physics of astrophysical transients through computational modeling.
-                I explore the gas dynamics of cataclysmic explosions such as supernovae (SNe), gamma-ray bursts (GRBs),
-                and Fast Blue Optical Transients (FBOTs) using <TT>SIMBI</TT>, a three-dimensional special relativistic
-                hydrodynamics code I developed that runs on CPUs as well as NVidia and AMD GPUs.
-                Currently, I am particularly interested in <strong>accretion problems</strong>, <strong>dynamical systems</strong>,
-                and the physics of <strong>bow shocks</strong>—especially how these phenomena interact in extreme environments
-                involving ultra-relativistic speeds, strong shocks, and magnetic fields. My work combines numerical simulations
-                with analytical theory to develop self-consistent models that constrain the fundamental processes driving
-                these catastrophic events, from the conditions preceding stellar death to the complex dynamics of matter
-                in extreme gravitational and electromagnetic fields.
-                <div class="research-keywords">
-                  <span class="keyword-pill">Astrophysical Transients</span>
-                  <span class="keyword-pill">Accretion Physics</span>
-                  <span class="keyword-pill">Dynamical Systems</span>
-                  <span class="keyword-pill">Bow Shocks</span>
-                  <span class="keyword-pill">Special Relativity</span>
-                  <span class="keyword-pill">Hydrodynamics</span>
-                  <span class="keyword-pill">GPU Computing</span>
-                  <span class="keyword-pill">Supernovae</span>
-                  <span class="keyword-pill">Gamma-Ray Bursts</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="ct-icon_box media">
-            <div class="media-body">
-              <h3 class="col-md-3 media-heading">Publications</h3>
-              <div class="col-lg-12 col-md-12">
-                <div class="publications-grid">
-                  {% for pub in site.data.publications %}
-                  <div class="publication-card">
-                    <span class="year-badge">{{ pub.year }}</span>
-                    <a href="{{ pub.url }}" target="_blank" class="publication-link">
-                      <h5 class="publication-title">{{ pub.short_title }}</h5>
-                      <p class="publication-authors">{{ pub.authors }}</p>
-                      <div class="publication-meta">
-                        <span class="venue-badge">{{ pub.venue }}</span>
-                        {% if pub.status == "preprint" %}
-                        <span class="badge badge-secondary">Preprint</span>
-                        {% endif %}
-                      </div>
-                    </a>
-                  </div>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ct-section_header ct-section_header--type2">
-        <h2>Education + Positions</h2>
-        <div class="clearfix"></div>
-        <div class="ct-section_header-separator"></div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="timetree-scroll-wrapper">
-            <div class="timetree">
-              <div class="timetree-trunk"></div>
+{% include navbar.html %}
 
-              <div class="timetree-item timetree-milestone">
-                <div class="timetree-upper"></div>
-                <div class="timetree-node timetree-node--lg"></div>
-                <div class="timetree-lower">
-                  <div class="timetree-stem"></div>
-                  <div class="timetree-card">
-                    <div class="timetree-year">2016 — 2019</div>
-                    <div class="timetree-title">B.S., Physics & Astrophysics</div>
-                    <div class="timetree-location">Florida State University</div>
-                  </div>
-                </div>
-              </div>
+<main class="term">
 
-              <div class="timetree-item timetree-branch">
-                <div class="timetree-upper">
-                  <div class="timetree-card">
-                    <div class="timetree-year">2017</div>
-                    <div class="timetree-title">Research Fellow</div>
-                    <div class="timetree-location">CfA | Harvard & Smithsonian</div>
-                  </div>
-                  <div class="timetree-stem"></div>
-                </div>
-                <div class="timetree-node timetree-node--sm"></div>
-                <div class="timetree-lower"></div>
-              </div>
+  <!-- ===================== boot / motd ===================== -->
+  <section class="boot">
+<pre class="banner"> _____  ___   ____  _____  _   _  ____   _____ __     __
+| ____||_ _| / ___|| ____|| \ | ||  _ \ | ____|\ \   / /
+|  _|   | | | |  _ |  _|  |  \| || | | ||  _|   \ \ / /
+| |___  | | | |_| || |___ | |\  || |_| || |___   \ V /
+|_____||___| \____||_____||_| \_||____/ |_____|   \_/
+</pre>
+    <div class="motd"><span class="hr">+-------------------------------------------------------------------+</span>
+<span class="hr">|</span>  <span class="v">EIGENDEV COMPUTE FACILITY</span> :: relativistic magnetohydrodynamics   <span class="hr">|</span>
+<span class="hr">|</span>  login node 01 / princeton, nj                                    <span class="hr">|</span>
+<span class="hr">+-------------------------------------------------------------------+</span>
+  <span class="k">kernel</span>   <span class="v">SIMBI 6.0.2-gpu (cuda/rocm)</span>
+  <span class="k">nodes</span>    <span class="v">up</span> <span class="ok">[OK]</span>    <span class="k">scheduler</span> <span class="v">slurm</span> <span class="ok">[OK]</span>    <span class="k">links</span> <span class="v">nominal</span> <span class="ok">[OK]</span>
+  <span class="k">notice</span>   catastrophic (astrophysical) explosions encouraged</div>
 
-              <div class="timetree-item timetree-branch">
-                <div class="timetree-upper">
-                  <div class="timetree-card">
-                    <div class="timetree-year">2018</div>
-                    <div class="timetree-title">Research Fellow</div>
-                    <div class="timetree-location">CfA | Harvard & Smithsonian</div>
-                  </div>
-                  <div class="timetree-stem"></div>
-                </div>
-                <div class="timetree-node timetree-node--sm"></div>
-                <div class="timetree-lower"></div>
-              </div>
+    <div class="typed">
+      <span class="line"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="type-target" data-text="whoami --long">whoami --long</span></span>
+      <span class="line reveal"><span class="hl">Marcus DuPont</span> &mdash; <span class="role">computational astrophysicist</span>, postdoc @ Princeton</span>
+      <span class="line reveal">gas dynamics of cataclysmic explosions // author of <a href="https://github.com/EigenDev/simbi" class="code-name">SIMBI</a> // GPU GRMHD</span>
+      <span class="line reveal"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="cursor"></span></span>
+    </div>
+  </section>
 
-              <div class="timetree-item timetree-branch">
-                <div class="timetree-upper">
-                  <div class="timetree-card">
-                    <div class="timetree-year">2019</div>
-                    <div class="timetree-title">Research Fellow</div>
-                    <div class="timetree-location">CfA | Harvard & Smithsonian</div>
-                  </div>
-                  <div class="timetree-stem"></div>
-                </div>
-                <div class="timetree-node timetree-node--sm"></div>
-                <div class="timetree-lower"></div>
-              </div>
-
-              <div class="timetree-item timetree-milestone">
-                <div class="timetree-upper"></div>
-                <div class="timetree-node timetree-node--lg"></div>
-                <div class="timetree-lower">
-                  <div class="timetree-stem"></div>
-                  <div class="timetree-card">
-                    <div class="timetree-year">2019 — 2024</div>
-                    <div class="timetree-title">Ph.D., Physics</div>
-                    <div class="timetree-location">New York University</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="timetree-item timetree-branch">
-                <div class="timetree-upper">
-                  <div class="timetree-card">
-                    <div class="timetree-year">2022</div>
-                    <div class="timetree-title">Graduate Fellow</div>
-                    <div class="timetree-location">Kavli Inst. for Theoretical Physics</div>
-                  </div>
-                  <div class="timetree-stem"></div>
-                </div>
-                <div class="timetree-node timetree-node--sm"></div>
-                <div class="timetree-lower"></div>
-              </div>
-
-              <div class="timetree-item timetree-branch">
-                <div class="timetree-upper">
-                  <div class="timetree-card">
-                    <div class="timetree-year">2022 — 2024</div>
-                    <div class="timetree-title">Graduate Fellow</div>
-                    <div class="timetree-location">LSST-DA Data Science Fellowship</div>
-                  </div>
-                  <div class="timetree-stem"></div>
-                </div>
-                <div class="timetree-node timetree-node--sm"></div>
-                <div class="timetree-lower"></div>
-              </div>
-
-              <div class="timetree-item timetree-branch">
-                <div class="timetree-upper">
-                  <div class="timetree-card">
-                    <div class="timetree-year">2023</div>
-                    <div class="timetree-title">Graduate Fellow</div>
-                    <div class="timetree-location">Max Planck Inst. for Astrophysics</div>
-                  </div>
-                  <div class="timetree-stem"></div>
-                </div>
-                <div class="timetree-node timetree-node--sm"></div>
-                <div class="timetree-lower"></div>
-              </div>
-
-              <div class="timetree-item timetree-milestone">
-                <div class="timetree-upper"></div>
-                <div class="timetree-node timetree-node--lg"></div>
-                <div class="timetree-lower">
-                  <div class="timetree-stem"></div>
-                  <div class="timetree-card">
-                    <div class="timetree-year">2024 — Present</div>
-                    <div class="timetree-title">Postdoctoral Researcher</div>
-                    <div class="timetree-location">Princeton University</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- ===================== about ===================== -->
+  <section id="about" class="block">
+    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">cat</span> <span class="path">~/research/README.md</span></div>
+    <div class="out">
+      <p class="prose">
+        My research focuses on understanding the physics of astrophysical transients through computational
+        modeling. I explore the gas dynamics of cataclysmic explosions&mdash;supernovae (SNe), gamma-ray
+        bursts (GRBs), and Fast Blue Optical Transients (FBOTs)&mdash;using <a href="https://github.com/EigenDev/simbi" class="code-name">SIMBI</a>,
+        a three-dimensional special- and general-relativistic magnetohydrodynamics code I developed that runs
+        on CPUs as well as NVIDIA and AMD GPUs. Currently I am particularly interested in <strong>accretion problems</strong>,
+        <strong>dynamical systems</strong>, and the physics of <strong>bow shocks</strong>&mdash;especially how
+        these phenomena interact in extreme environments involving ultra-relativistic speeds, strong shocks,
+        and magnetic fields. My work combines numerical simulation with analytical theory to build
+        self-consistent models that constrain the fundamental processes driving these catastrophic events,
+        from the conditions preceding stellar death to the complex dynamics of matter in extreme
+        gravitational and electromagnetic fields.
+      </p>
+      <div class="tags">
+        <span class="tag">astrophysical-transients</span>
+        <span class="tag">accretion-physics</span>
+        <span class="tag">dynamical-systems</span>
+        <span class="tag">bow-shocks</span>
+        <span class="tag">general-relativity</span>
+        <span class="tag">magnetohydrodynamics</span>
+        <span class="tag">hydrodynamics</span>
+        <span class="tag">gpu-computing</span>
+        <span class="tag">supernovae</span>
+        <span class="tag">gamma-ray-bursts</span>
       </div>
     </div>
   </section>
-  <section class="ct_icon_box_section">
-    <div class="container">
-      <div class="ct-section_header ct-section_header--type2 contact">
-        <h2>Pretty Simulation (Created with my code, <a class='code-name'
-            href="https://github.com/EigenDev/simbi">SIMBI</a>)</h2>
-        <div class="clearfix"></div>
-        <div class="ct-section_header-separator"></div>
-        <div class="container">
-          <video width="550" height="450" controls>
-            <source src="/assets/images/movies/kh_2048.mp4" type=video/mp4>
-          </video>
+
+  <!-- ===================== publications (squeue) ===================== -->
+  <section id="pubs" class="block">
+    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">squeue</span> <span class="flag">-u</span> mdupont <span class="flag">--sort=-year</span></div>
+    <div class="out">
+      <div class="squeue">
+        <table>
+          <thead>
+            <tr>
+              <th>JOBID</th>
+              <th>PARTITION</th>
+              <th>NAME</th>
+              <th>ST</th>
+              <th>YEAR</th>
+              <th>AUTHORS</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for pub in site.data.publications %}
+            {% assign jobid = forloop.index0 | times: 173 | plus: 840217 %}
+            {% assign part = pub.venue | replace: 'The Astrophysical Journal Letters', 'ApJL' | replace: 'The Astrophysical Journal Supplement', 'ApJS' | replace: 'The Astrophysical Journal', 'ApJ' | replace: 'Monthly Notices of the Royal Astronomical Society', 'MNRAS' | replace: 'arXiv e-prints', 'arXiv' | replace: 'Physical Review', 'PhysRev' %}
+            <tr>
+              <td class="jobid">{{ jobid }}</td>
+              <td class="part">{{ part | truncate: 12, '' }}</td>
+              <td class="name"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.short_title }}</a></td>
+              <td>{% if pub.status == 'preprint' %}<span class="st r">R</span>{% else %}<span class="st cd">CD</span>{% endif %}</td>
+              <td class="year">{{ pub.year }}</td>
+              <td class="auth">{{ pub.authors }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="tally"># {{ site.data.publications | size }} jobs listed &mdash; ST: <span class="st cd">CD</span> completed (published), <span class="st r">R</span> running (preprint). full record: <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3356-880X&sort=date+desc" target="_blank" rel="noopener">ADS</a></div>
+    </div>
+  </section>
+
+  <!-- ===================== career (git log) ===================== -->
+  <section id="career" class="block">
+    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">git</span> <span class="flag">-C</span> ~/career log <span class="flag">--graph --oneline --decorate</span></div>
+    <div class="out">
+      <div class="gitlog">
+        <div class="row"><span class="graph">*</span><span class="hash">a1f9c02</span><span class="msg"><span class="decor">(<span class="head">HEAD -&gt; main</span>, <span class="tag">origin/main</span>)</span> <span class="yr">2024&mdash;now</span> Postdoctoral Researcher &mdash; <span class="where">Princeton University</span></span></div>
+        <div class="row"><span class="graph">*</span><span class="hash">7d3e8b4</span><span class="msg"><span class="yr">2023</span> Graduate Fellow &mdash; <span class="where">Max Planck Inst. for Astrophysics</span></span></div>
+        <div class="row"><span class="graph">*</span><span class="hash">b028f1a</span><span class="msg"><span class="yr">2022&mdash;24</span> Graduate Fellow &mdash; <span class="where">LSST-DA Data Science Fellowship</span></span></div>
+        <div class="row"><span class="graph">*</span><span class="hash">3c5a9e7</span><span class="msg"><span class="yr">2022</span> Graduate Fellow &mdash; <span class="where">Kavli Inst. for Theoretical Physics</span></span></div>
+        <div class="row"><span class="graph">*</span><span class="hash">f61d24c</span><span class="msg"><span class="decor">(<span class="tag">tag: phd</span>)</span> <span class="yr">2019&mdash;24</span> Ph.D., Physics &mdash; <span class="where">New York University</span></span></div>
+        <div class="row"><span class="graph">*</span><span class="hash">9ae0037</span><span class="msg"><span class="yr">2019</span> Research Fellow &mdash; <span class="where">CfA | Harvard &amp; Smithsonian</span></span></div>
+        <div class="row"><span class="graph">*</span><span class="hash">4bb17f9</span><span class="msg"><span class="yr">2018</span> Research Fellow &mdash; <span class="where">CfA | Harvard &amp; Smithsonian</span></span></div>
+        <div class="row"><span class="graph">*</span><span class="hash">2e90d5c</span><span class="msg"><span class="yr">2017</span> Research Fellow &mdash; <span class="where">CfA | Harvard &amp; Smithsonian</span></span></div>
+        <div class="row"><span class="graph">*</span><span class="hash">0000000</span><span class="msg"><span class="decor">(<span class="tag">tag: root</span>)</span> <span class="yr">2016&mdash;19</span> B.S., Physics &amp; Astrophysics &mdash; <span class="where">Florida State University</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== simulation ===================== -->
+  <section id="sim" class="block">
+    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">./simbi</span> run kh2d.cfg <span class="flag">--gpu</span> <span class="flag">--res</span> 2048</div>
+    <div class="out">
+      <div class="simlog"><span class="t">[0.000s]</span> simbi 6.0.2 :: 2d relativistic hydro // kelvin-helmholtz
+<span class="t">[0.004s]</span> backend cuda :: 1 device :: 2048x2048 grid :: cfl 0.10
+<span class="t">[0.021s]</span> boundary periodic-x periodic-y :: reconstruction plm :: solver hllc
+<span class="t">[12.83s]</span> t=1.00  step 41207  <span class="bar">[<span class="fill">##################</span><span class="empty">--</span>]</span> 92%  <span class="warn">shear layer unstable</span>
+<span class="t">[13.91s]</span> checkpoint written :: kh2d_final.h5  <span class="ok">[OK]</span></div>
+      <div class="viewport">
+        <div class="vp-bar">
+          <span class="dot" style="background:#ff5f56"></span>
+          <span class="dot" style="background:#ffbd2e"></span>
+          <span class="dot" style="background:#27c93f"></span>
+          <span style="margin-left:4px">kh2d_final.mp4 &mdash; rendered with SIMBI</span>
         </div>
+        <video width="620" height="480" controls preload="metadata">
+          <source src="/assets/images/movies/kh_2048.mp4#t=0.1" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
-  <section class="ct_icon_box_section">
-    <div class="container">
-      <div class="ct-section_header ct-section_header--type2 contact">
-        <h2>Contact Me</h2>
-        <div class="clearfix"></div>
-        <div class="ct-section_header-separator"></div>
-        <div class="ct-section_header-description">marcus.dupont[at]princeton[dot]edu</div>
+
+  <!-- ===================== flagship render (jet) ===================== -->
+  <section id="jet" class="block">
+    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">feh</span> <span class="flag">--scale-down</span> renders/grb_jet.png</div>
+    <div class="out">
+      <div class="viewport">
+        <div class="vp-bar">
+          <span class="dot" style="background:#ff5f56"></span>
+          <span class="dot" style="background:#ffbd2e"></span>
+          <span class="dot" style="background:#27c93f"></span>
+          <span style="margin-left:4px">grb_jet.png &mdash; feh [1 of 1] &mdash; 5000&times;4000</span>
+        </div>
+        <img src="/assets/images/welcome/jet_2048_infinity_linknyc.png"
+             alt="relativistic bipolar jet boring through a stellar envelope, simulated with SIMBI"
+             width="620" height="496" loading="lazy" decoding="async">
+        <div class="cap">relativistic bipolar jet punching out of the progenitor envelope &mdash; a collapsar / GRB central engine, rendered with SIMBI</div>
       </div>
     </div>
   </section>
-  <footer>
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      <p class="text-reset fw-bold"">Copyright © <span id="spanYear"></span> Marcus DuPont. All rights reserved</p>
-</div>
-<!-- Copyright -->
- <script>
-  var spanYear = document.getElementById('spanYear');
-  var d = new Date();
-  spanYear.innerHTML = d.getFullYear();
-</script>
+
+  <!-- ===================== contact ===================== -->
+  <section id="contact" class="block">
+    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">cat</span> <span class="path">~/.contact</span></div>
+    <div class="out">
+      <ul class="contactlist">
+        <li><span class="k">email</span> <a href="mailto:marcus.dupont@princeton.edu">marcus.dupont@princeton.edu</a></li>
+        <li><span class="k">github</span> <a href="https://github.com/EigenDev" target="_blank" rel="noopener">github.com/EigenDev</a></li>
+        <li><span class="k">code</span> <a href="https://github.com/EigenDev/simbi" target="_blank" rel="noopener">github.com/EigenDev/simbi</a></li>
+        <li><span class="k">ads</span> <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3356-880X&sort=date+desc" target="_blank" rel="noopener">orcid:0000-0003-3356-880X</a></li>
+        <li><span class="k">cv</span> <a href="/assets/docs/dupont_biosketch.pdf" target="_blank" rel="noopener">dupont_biosketch.pdf</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="prompt-live"><span class="path">[mdupont@eigendev ~]%</span> <span class="cursor"></span></div>
+
+  <div class="foot"># copyright <span id="year"></span> Marcus DuPont &middot; served from eigen-login01 &middot; no rights reserved to the physics</div>
+
+</main>
+
+<!-- ===================== tmux status bar ===================== -->
+<footer class="statusbar">
+  <span class="sb-seg active">eigendev</span>
+  <span class="sb-seg">0:zsh*</span>
+  <span class="sb-spacer"></span>
+  <span class="sb-seg sb-hide">~/research</span>
+  <span class="sb-seg info" id="clock">--:--:--</span>
 </footer>
-</section>
