@@ -38,6 +38,15 @@
   if (!target) return;
 
   var text = target.getAttribute("data-text") || target.textContent;
+
+  // reduced-motion: skip the typewriter, show everything at once.
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) {
+    target.textContent = text;
+    reveals.forEach(function (el) { el.classList.add("show"); });
+    return;
+  }
+
   target.textContent = "";
 
   var ii = 0;

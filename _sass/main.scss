@@ -3,7 +3,7 @@
 //
 // terminal / old-school hpc theme for marcus dupont's site.
 // the page is rendered as a shell session on a fictional relativistic
-// hydrodynamics cluster ("eigen"). pure 7-bit ascii banners, phosphor
+// mhd cluster ("eigendev"). pure 7-bit ascii banners, phosphor
 // palette, crt scanline overlay, monospace everywhere.
 //
 // sections map to shell commands:
@@ -439,4 +439,22 @@ body::after {
   body { font-size: 14px; }
   .term { padding: 20px 14px 80px; }
   .gitlog .row { grid-template-columns: 1.2em 4.4em auto; }
+}
+
+// -- reduced motion ----------------------------------------------------------
+// honor the os "reduce motion" preference: no cursor blink, no typewriter
+// reveal, no hover/fade transitions, instant anchor scrolling. content stays
+// fully present (the js typewriter also bails out; see terminal.js).
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .cursor { animation: none; opacity: 1; }
+  .js .typed .reveal { opacity: 1; transform: none; }
 }

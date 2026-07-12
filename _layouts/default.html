@@ -8,6 +8,27 @@
     <meta name="description" content="Marcus DuPont — computational astrophysicist. General-relativistic magnetohydrodynamics, astrophysical transients, and the SIMBI GPU code.">
     <meta name="keywords" content="Physics, Marcus DuPont, Princeton, Simbi, computational astrophysics, general relativistic magnetohydrodynamics, GRMHD">
     <meta name="author" content="Marcus DuPont">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <!-- favicon -->
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <!-- open graph / twitter share cards -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }} — computational astrophysicist">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/images/og-card.png' | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="EigenDev terminal — Marcus DuPont, computational astrophysicist">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }} — computational astrophysicist">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{{ '/assets/images/og-card.png' | absolute_url }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
