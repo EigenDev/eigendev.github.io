@@ -7,11 +7,12 @@ layout: default
 
   <!-- ===================== boot / motd ===================== -->
   <section class="boot">
-<pre class="banner"> _____  ___   ____  _____  _   _  ____   _____ __     __
-| ____||_ _| / ___|| ____|| \ | ||  _ \ | ____|\ \   / /
-|  _|   | | | |  _ |  _|  |  \| || | | ||  _|   \ \ / /
-| |___  | | | |_| || |___ | |\  || |_| || |___   \ V /
-|_____||___| \____||_____||_| \_||____/ |_____|   \_/
+<h1 class="sr-only">Marcus DuPont &mdash; computational astrophysicist</h1>
+<pre class="banner" role="img" aria-label="MARCUS DUPONT"> __  __     _     ____    ____  _   _  ____     ____   _   _  ____    ___   _   _  _____
+|  \/  |   / \   |  _ \  / ___|| | | |/ ___|   |  _ \ | | | ||  _ \  / _ \ | \ | ||_   _|
+| |\/| |  / _ \  | |_) || |    | | | |\___ \   | | | || | | || |_) || | | ||  \| |  | |
+| |  | | / ___ \ |  _ < | |___ | |_| | ___) |  | |_| || |_| ||  __/ | |_| || |\  |  | |
+|_|  |_|/_/   \_\|_| \_\ \____| \___/ |____/   |____/  \___/ |_|     \___/ |_| \_|  |_|
 </pre>
     <div class="motd"><span class="hr">+-------------------------------------------------------------------+</span>
 <span class="hr">|</span>  <span class="v">EIGENDEV COMPUTE FACILITY</span> :: relativistic magnetohydrodynamics   <span class="hr">|</span>
@@ -31,6 +32,7 @@ layout: default
 
   <!-- ===================== about ===================== -->
   <section id="about" class="block">
+    <div class="sec-tag">about me</div>
     <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">cat</span> <span class="path">~/research/README.md</span></div>
     <div class="out">
       <p class="prose">
@@ -63,6 +65,7 @@ layout: default
 
   <!-- ===================== publications (squeue) ===================== -->
   <section id="pubs" class="block">
+    <div class="sec-tag">publications</div>
     <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">squeue</span> <span class="flag">-u</span> mdupont <span class="flag">--sort=-year</span></div>
     <div class="out">
       <div class="squeue">
@@ -100,6 +103,7 @@ layout: default
 
   <!-- ===================== career (git log) ===================== -->
   <section id="career" class="block">
+    <div class="sec-tag">education + positions</div>
     <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">git</span> <span class="flag">-C</span> ~/career log <span class="flag">--graph --oneline --decorate</span></div>
     <div class="out">
       <div class="gitlog">
@@ -118,6 +122,7 @@ layout: default
 
   <!-- ===================== simulation ===================== -->
   <section id="sim" class="block">
+    <div class="sec-tag">simulation demo (made with SIMBI)</div>
     <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">./simbi</span> run kh2d.cfg <span class="flag">--gpu</span> <span class="flag">--res</span> 2048</div>
     <div class="out">
       <div class="simlog"><span class="t">[0.000s]</span> simbi 6.0.2 :: 2d relativistic hydro // kelvin-helmholtz
@@ -141,6 +146,7 @@ layout: default
 
   <!-- ===================== flagship render (jet) ===================== -->
   <section id="jet" class="block">
+    <div class="sec-tag">flagship render</div>
     <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">feh</span> <span class="flag">--scale-down</span> renders/grb_jet.png</div>
     <div class="out">
       <div class="viewport">
@@ -160,6 +166,7 @@ layout: default
 
   <!-- ===================== contact ===================== -->
   <section id="contact" class="block">
+    <div class="sec-tag">contact</div>
     <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">cat</span> <span class="path">~/.contact</span></div>
     <div class="out">
       <ul class="contactlist">
