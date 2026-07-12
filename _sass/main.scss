@@ -294,7 +294,7 @@ body::after {
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
-  min-width: 620px;
+  min-width: 760px;
 }
 .squeue thead th {
   text-align: left;
@@ -319,6 +319,21 @@ body::after {
 .squeue .name a { color: var(--fg); }
 .squeue tbody tr:hover .name a { color: var(--green); text-decoration: none; }
 .squeue .auth   { color: var(--dim); white-space: nowrap; }
+
+// cite column: a "bibtex" link per row to the ads export-citation page
+.squeue .cite   { white-space: nowrap; }
+.squeue .cite a,
+.cite-eg {
+  color: var(--green-dim);
+  border-bottom: 1px dotted var(--green-dim);
+}
+.squeue .cite a:hover,
+.squeue tbody tr:hover .cite a {
+  color: var(--green);
+  border-bottom-color: var(--green);
+  text-decoration: none;
+}
+.cite-eg { border-bottom-style: dotted; }
 
 .st {
   font-weight: 700;

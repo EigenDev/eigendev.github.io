@@ -69,31 +69,32 @@ layout: default
         <table>
           <thead>
             <tr>
-              <th>JOBID</th>
+              <th>BIBCODE</th>
               <th>PARTITION</th>
               <th>NAME</th>
               <th>ST</th>
               <th>YEAR</th>
               <th>AUTHORS</th>
+              <th>CITE</th>
             </tr>
           </thead>
           <tbody>
             {% for pub in site.data.publications %}
-            {% assign jobid = forloop.index0 | times: 173 | plus: 840217 %}
             {% assign part = pub.venue | replace: 'The Astrophysical Journal Letters', 'ApJL' | replace: 'The Astrophysical Journal Supplement', 'ApJS' | replace: 'The Astrophysical Journal', 'ApJ' | replace: 'Monthly Notices of the Royal Astronomical Society', 'MNRAS' | replace: 'arXiv e-prints', 'arXiv' | replace: 'Physical Review', 'PhysRev' %}
             <tr>
-              <td class="jobid">{{ jobid }}</td>
+              <td class="jobid">{{ pub.bibcode }}</td>
               <td class="part">{{ part | truncate: 12, '' }}</td>
               <td class="name"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.short_title }}</a></td>
               <td>{% if pub.status == 'preprint' %}<span class="st r">R</span>{% else %}<span class="st cd">CD</span>{% endif %}</td>
               <td class="year">{{ pub.year }}</td>
               <td class="auth">{{ pub.authors }}</td>
+              <td class="cite">{% if pub.bibcode %}<a href="https://ui.adsabs.harvard.edu/abs/{{ pub.bibcode | url_encode }}/exportcitation" target="_blank" rel="noopener" title="export citation (BibTeX / AASTeX) from ADS">bibtex</a>{% else %}&mdash;{% endif %}</td>
             </tr>
             {% endfor %}
           </tbody>
         </table>
       </div>
-      <div class="tally"># {{ site.data.publications | size }} jobs listed &mdash; ST: <span class="st cd">CD</span> completed (published), <span class="st r">R</span> running (preprint). full record: <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3356-880X&sort=date+desc" target="_blank" rel="noopener">ADS</a></div>
+      <div class="tally"># {{ site.data.publications | size }} jobs listed &mdash; ST: <span class="st cd">CD</span> completed (published), <span class="st r">R</span> running (preprint). <span class="cite-eg">bibtex</span> exports each citation from ADS. full record: <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3356-880X&sort=date+desc" target="_blank" rel="noopener">ADS</a></div>
     </div>
   </section>
 
