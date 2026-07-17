@@ -29,6 +29,16 @@
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image" content="{{ '/assets/images/og-card.png' | absolute_url }}">
 
+    <script>
+      // apply saved theme before first paint to avoid a flash of the wrong palette
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (!t && window.matchMedia("(prefers-color-scheme: light)").matches) t = "gruvbox-light";
+          if (t && t !== "mint") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">

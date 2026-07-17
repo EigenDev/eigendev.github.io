@@ -14,6 +14,36 @@
 
   document.documentElement.classList.add("js");
 
+  // -- theme cycling ---------------------------------------------------------
+  // cycles mint -> gruvbox-dark -> gruvbox-light; persisted in localStorage.
+  // the head boot script applies the saved theme pre-paint; this just cycles.
+  var THEMES = ["mint", "gruvbox-dark", "gruvbox-light"];
+  var themeSeg = document.getElementById("themeSeg");
+  var themeToggle = document.getElementById("themeToggle");
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") || "mint";
+  }
+
+  function applyTheme(name) {
+    if (name === "mint") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", name);
+    }
+    if (themeSeg) themeSeg.textContent = name;
+    try { localStorage.setItem("theme", name); } catch (e) {}
+  }
+
+  if (themeSeg) themeSeg.textContent = currentTheme();
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      var next = THEMES[(THEMES.indexOf(currentTheme()) + 1) % THEMES.length];
+      applyTheme(next);
+    });
+  }
+
   // -- live clock + year -----------------------------------------------------
   var clock = document.getElementById("clock");
   var year = document.getElementById("year");

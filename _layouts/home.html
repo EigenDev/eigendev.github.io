@@ -23,18 +23,55 @@ layout: default
   <span class="k">notice</span>   catastrophic (astrophysical) explosions encouraged</div>
 
     <div class="typed">
-      <span class="line"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="type-target" data-text="whoami --long">whoami --long</span></span>
-      <span class="line reveal"><span class="hl">Marcus DuPont</span> &mdash; <span class="role">computational astrophysicist</span>, postdoc @ Princeton</span>
-      <span class="line reveal">gas dynamics of cataclysmic explosions // author of <a href="https://github.com/EigenDev/simbi" class="code-name">SIMBI</a> // GPU GRMHD</span>
-      <span class="line reveal"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="cursor"></span></span>
+      <span class="line">{% include ps1.html %} <span class="type-target" data-text="fastfetch">fastfetch</span></span>
+      <div class="reveal">
+        <div class="fetch">
+          <span class="panel-title">identity</span>
+          <pre class="fetch-logo" aria-hidden="true"><span class="lobe-n">    ______
+   /######\
+  |########|
+  |########|
+   \######/
+    \####/
+     \##/
+      \/</span><span class="lobe-s">
+      /\
+     /##\
+    /####\
+   /######\
+  |########|
+  |########|
+   \######/
+    \____/</span></pre>
+          <div class="fetch-info">
+            <div class="fetch-title">mdupont@eigendev-login01</div>
+            <div class="fetch-sep">------------------------</div>
+            <div class="frow"><span class="fk">Name</span>: <span class="hl">Marcus DuPont</span></div>
+            <div class="frow"><span class="fk">Role</span>: computational astrophysicist</div>
+            <div class="frow"><span class="fk">Host</span>: Princeton University (postdoc)</div>
+            <div class="frow"><span class="fk">Kernel</span>: <a href="https://github.com/EigenDev/simbi" class="code-name">SIMBI</a> 6.0.2-gpu (GRMHD, cuda/rocm)</div>
+            <div class="frow"><span class="fk">Shell</span>: zsh</div>
+            <div class="frow"><span class="fk">Uptime</span>: in physics since 2016</div>
+            <div class="frow"><span class="fk">Packages</span>: {{ site.data.publications | size }} papers (<a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3356-880X&sort=date+desc" target="_blank" rel="noopener">ads</a>)</div>
+            <div class="frow"><span class="fk">Focus</span>: transients // accretion // bow shocks</div>
+            <div class="frow"><span class="fk">Email</span>: <a href="mailto:marcus.dupont@princeton.edu">marcus.dupont@princeton.edu</a></div>
+            <div class="frow"><span class="fk">GitHub</span>: <a href="https://github.com/EigenDev" target="_blank" rel="noopener">EigenDev</a></div>
+            <div class="frow"><span class="fk">Links</span>: <a href="https://scholar.google.com/citations?user=Kq_7yZgAAAAJ&hl=en" target="_blank" rel="noopener">scholar</a> / <a href="/presentations">talks</a> / <a href="/assets/docs/dupont_biosketch.pdf" target="_blank" rel="noopener">cv</a></div>
+            <div class="fetch-palette">
+              <span class="p0"></span><span class="p1"></span><span class="p2"></span><span class="p3"></span><span class="p4"></span><span class="p5"></span><span class="p6"></span><span class="p7"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="line reveal">{% include ps1.html %} <span class="cursor"></span></span>
     </div>
   </section>
 
   <!-- ===================== about ===================== -->
   <section id="about" class="block">
-    <div class="sec-tag">about me</div>
-    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">cat</span> <span class="path">~/research/README.md</span></div>
+    <div class="cmd">{% include ps1.html %} <span class="exec">cat</span> <span class="path">~/research/README.md</span></div>
     <div class="out">
+      <span class="panel-title">about me</span>
       <p class="prose">
         My research focuses on understanding the physics of astrophysical transients through computational
         modeling. I explore the gas dynamics of cataclysmic explosions&mdash;supernovae (SNe), gamma-ray
@@ -63,11 +100,28 @@ layout: default
     </div>
   </section>
 
+
+  <!-- ===================== dev stack (btop) ===================== -->
+  <section id="stack" class="block">
+    <div class="cmd">{% include ps1.html %} <span class="exec">btop</span> <span class="flag">--preset</span> dev</div>
+    <div class="out">
+      <span class="panel-title">dev stack</span>
+      <div class="meters">
+        <div class="meter"><span class="mk">c++20 / stl</span><span class="mtrack"><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell half"></span><span class="cell"></span><span class="cell"></span></span><span class="mval">90%</span></div>
+        <div class="meter"><span class="mk">python / numpy</span><span class="mtrack"><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell half"></span><span class="cell"></span><span class="cell"></span></span><span class="mval">90%</span></div>
+        <div class="meter"><span class="mk">gpu :: cuda + hip</span><span class="mtrack"><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell half"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span></span><span class="mval">80%</span></div>
+        <div class="meter"><span class="mk">rust</span><span class="mtrack"><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell half"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span></span><span class="mval">55%</span></div>
+        <div class="meter"><span class="mk">linux / hpc / slurm</span><span class="mtrack"><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell on"></span><span class="cell half"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span></span><span class="mval">85%</span></div>
+      </div>
+      <div class="note stack-note"># daily drivers &mdash; <a href="https://github.com/EigenDev/simbi" class="code-name">SIMBI</a> is c++20 with cuda/rocm gpu backends</div>
+    </div>
+  </section>
+
   <!-- ===================== publications (squeue) ===================== -->
   <section id="pubs" class="block">
-    <div class="sec-tag">publications</div>
-    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">squeue</span> <span class="flag">-u</span> mdupont <span class="flag">--sort=-year</span></div>
+    <div class="cmd">{% include ps1.html %} <span class="exec">squeue</span> <span class="flag">-u</span> mdupont <span class="flag">--sort=-year</span></div>
     <div class="out">
+      <span class="panel-title">publications</span>
       <div class="squeue">
         <table>
           <thead>
@@ -103,9 +157,9 @@ layout: default
 
   <!-- ===================== career (git log) ===================== -->
   <section id="career" class="block">
-    <div class="sec-tag">education + positions</div>
-    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">git</span> <span class="flag">-C</span> ~/career log <span class="flag">--graph --oneline --decorate</span></div>
+    <div class="cmd">{% include ps1.html %} <span class="exec">git</span> <span class="flag">-C</span> ~/career log <span class="flag">--graph --oneline --decorate</span></div>
     <div class="out">
+      <span class="panel-title">education + positions</span>
       <div class="gitlog">
         <div class="row"><span class="graph">*</span><span class="hash">a1f9c02</span><span class="msg"><span class="decor">(<span class="head">HEAD -&gt; main</span>, <span class="tag">origin/main</span>)</span> <span class="yr">2024&mdash;now</span> Postdoctoral Researcher &mdash; <span class="where">Princeton University</span></span></div>
         <div class="row"><span class="graph">*</span><span class="hash">7d3e8b4</span><span class="msg"><span class="yr">2023</span> Graduate Fellow &mdash; <span class="where">Max Planck Inst. for Astrophysics</span></span></div>
@@ -122,9 +176,9 @@ layout: default
 
   <!-- ===================== simulation ===================== -->
   <section id="sim" class="block">
-    <div class="sec-tag">simulation demo (made with SIMBI)</div>
-    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">./simbi</span> run kh2d.cfg <span class="flag">--gpu</span> <span class="flag">--res</span> 2048</div>
+    <div class="cmd">{% include ps1.html %} <span class="exec">./simbi</span> run kh2d.cfg <span class="flag">--gpu</span> <span class="flag">--res</span> 2048</div>
     <div class="out">
+      <span class="panel-title">simulation demo (made with SIMBI)</span>
       <div class="simlog"><span class="t">[0.000s]</span> simbi 6.0.2 :: 2d relativistic hydro // kelvin-helmholtz
 <span class="t">[0.004s]</span> backend cuda :: 1 device :: 2048x2048 grid :: cfl 0.10
 <span class="t">[0.021s]</span> boundary periodic-x periodic-y :: reconstruction plm :: solver hllc
@@ -146,9 +200,9 @@ layout: default
 
   <!-- ===================== flagship render (jet) ===================== -->
   <section id="jet" class="block">
-    <div class="sec-tag">flagship render</div>
-    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">feh</span> <span class="flag">--scale-down</span> renders/grb_jet.png</div>
+    <div class="cmd">{% include ps1.html %} <span class="exec">feh</span> <span class="flag">--scale-down</span> renders/grb_jet.png</div>
     <div class="out">
+      <span class="panel-title">flagship render</span>
       <div class="viewport">
         <div class="vp-bar">
           <span class="dot" style="background:#ff5f56"></span>
@@ -166,9 +220,9 @@ layout: default
 
   <!-- ===================== contact ===================== -->
   <section id="contact" class="block">
-    <div class="sec-tag">contact</div>
-    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">cat</span> <span class="path">~/.contact</span></div>
+    <div class="cmd">{% include ps1.html %} <span class="exec">cat</span> <span class="path">~/.contact</span></div>
     <div class="out">
+      <span class="panel-title">contact</span>
       <ul class="contactlist">
         <li><span class="k">email</span> <a href="mailto:marcus.dupont@princeton.edu">marcus.dupont@princeton.edu</a></li>
         <li><span class="k">github</span> <a href="https://github.com/EigenDev" target="_blank" rel="noopener">github.com/EigenDev</a></li>
@@ -181,7 +235,7 @@ layout: default
     </div>
   </section>
 
-  <div class="prompt-live"><span class="path">[mdupont@eigendev ~]%</span> <span class="cursor"></span></div>
+  <div class="prompt-live">{% include ps1.html %} <span class="cursor"></span></div>
 
   <div class="foot"># copyright <span id="year"></span> Marcus DuPont &middot; served from eigen-login01 &middot; no rights reserved to the physics</div>
 
@@ -193,5 +247,6 @@ layout: default
   <span class="sb-seg">0:zsh*</span>
   <span class="sb-spacer"></span>
   <span class="sb-seg sb-hide">~/research</span>
+  <span class="sb-seg sb-hide" id="themeSeg">mint</span>
   <span class="sb-seg info" id="clock">--:--:--</span>
 </footer>

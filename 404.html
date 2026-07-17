@@ -15,7 +15,7 @@ layout: default
   </section>
 
   <section class="block">
-    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">stat</span> <span class="path">"$REQUEST_URI"</span></div>
+    <div class="cmd">{% include ps1.html %} <span class="exec">stat</span> <span class="path">"$REQUEST_URI"</span></div>
     <div class="out">
       <div class="simlog"><span class="warn">stat: cannot stat the requested page: No such file or directory</span>
 segmentation fault (core dumped) :: signal 11 (SIGSEGV) :: page not found in this universe</div>
@@ -24,7 +24,7 @@ segmentation fault (core dumped) :: signal 11 (SIGSEGV) :: page not found in thi
   </section>
 
   <section class="block">
-    <div class="cmd"><span class="prompt">[mdupont@eigendev ~]%</span> <span class="exec">cd</span> <span class="path">~</span></div>
+    <div class="cmd">{% include ps1.html %} <span class="exec">cd</span> <span class="path">~</span></div>
     <div class="out">
       <ul class="contactlist">
         <li><span class="k">home</span> <a href="/">return to $HOME</a></li>
@@ -34,7 +34,7 @@ segmentation fault (core dumped) :: signal 11 (SIGSEGV) :: page not found in thi
     </div>
   </section>
 
-  <div class="prompt-live"><span class="path">[mdupont@eigendev ~]%</span> <span class="cursor"></span></div>
+  <div class="prompt-live">{% include ps1.html %} <span class="cursor"></span></div>
 </main>
 
 <footer class="statusbar">
@@ -42,5 +42,6 @@ segmentation fault (core dumped) :: signal 11 (SIGSEGV) :: page not found in thi
   <span class="sb-seg">0:zsh*</span>
   <span class="sb-spacer"></span>
   <span class="sb-seg sb-hide">~</span>
+  <span class="sb-seg sb-hide" id="themeSeg">mint</span>
   <span class="sb-seg info" id="clock">--:--:--</span>
 </footer>
