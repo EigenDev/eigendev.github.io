@@ -32,7 +32,7 @@
       document.documentElement.setAttribute("data-theme", name);
     }
     if (themeSeg) themeSeg.textContent = name;
-    try { localStorage.setItem("theme", name); } catch (e) {}
+    try { localStorage.setItem("theme-v2", name); } catch (e) {}
   }
 
   if (themeSeg) themeSeg.textContent = currentTheme();
