@@ -5,9 +5,25 @@ layout: default
 
 <main class="term">
 
+  <!-- The terminal is the visual language; this gives every visitor a
+       plain-language starting point before the cluster boot sequence. -->
+  <section class="welcome" aria-labelledby="welcome-title">
+    <div class="welcome-kicker">Computational astrophysicist · Princeton University</div>
+    <h1 id="welcome-title">Hi, I’m Marcus DuPont.</h1>
+    <p>
+      I use supercomputer simulations to study exploding stars, black-hole environments,
+      and some of the brightest events in the universe.
+    </p>
+    <div class="welcome-actions" aria-label="Start exploring">
+      <a class="primary" href="#about">Explore my research</a>
+      <a href="#sim">Watch a simulation</a>
+      <a href="#pubs">View publications</a>
+      <a href="#contact">Contact me</a>
+    </div>
+  </section>
+
   <!-- ===================== boot / motd ===================== -->
   <section class="boot">
-<h1 class="sr-only">Marcus DuPont &mdash; computational astrophysicist</h1>
 <pre class="banner" role="img" aria-label="MARCUS DUPONT"> __  __     _     ____    ____  _   _  ____     ____   _   _  ____    ___   _   _  _____
 |  \/  |   / \   |  _ \  / ___|| | | |/ ___|   |  _ \ | | | ||  _ \  / _ \ | \ | ||_   _|
 | |\/| |  / _ \  | |_) || |    | | | |\___ \   | | | || | | || |_) || | | ||  \| |  | |
@@ -73,17 +89,18 @@ layout: default
     <div class="out">
       <span class="panel-title">about me</span>
       <p class="prose">
-        My research focuses on understanding the physics of astrophysical transients through computational
-        modeling. I explore the gas dynamics of cataclysmic explosions&mdash;supernovae (SNe), gamma-ray
-        bursts (GRBs), and Fast Blue Optical Transients (FBOTs)&mdash;using <a href="https://github.com/EigenDev/simbi" class="code-name">SIMBI</a>,
-        a three-dimensional special- and general-relativistic magnetohydrodynamics code I developed that runs
-        on CPUs as well as NVIDIA and AMD GPUs. Currently I am particularly interested in <strong>accretion problems</strong>,
-        <strong>dynamical systems</strong>, and the physics of <strong>bow shocks</strong>&mdash;especially how
-        these phenomena interact in extreme environments involving ultra-relativistic speeds, strong shocks,
-        and magnetic fields. My work combines numerical simulation with analytical theory to build
-        self-consistent models that constrain the fundamental processes driving these catastrophic events,
-        from the conditions preceding stellar death to the complex dynamics of matter in extreme
-        gravitational and electromagnetic fields.
+        I study what happens when matter moves at nearly the speed of light around exploding stars
+        and black holes. These extreme events can briefly outshine entire galaxies, but many of the
+        forces driving them cannot be observed directly. Computer simulations let me test the physics
+        behind what telescopes see.
+      </p>
+      <p class="prose prose-detail">
+        I focus on supernovae, gamma-ray bursts, and other short-lived cosmic explosions. I developed
+        <a href="https://github.com/EigenDev/simbi" class="code-name">SIMBI</a>, a simulation code that
+        runs on CPUs and NVIDIA or AMD GPUs, to model fast-moving gas, shocks, magnetic fields, and
+        strong gravity. I’m especially interested in <strong>accretion</strong>—matter falling toward
+        a compact object—and <strong>bow shocks</strong>, the curved shock waves made as objects move
+        through surrounding gas.
       </p>
       <div class="tags">
         <span class="tag">astrophysical-transients</span>
@@ -126,10 +143,10 @@ layout: default
         <table>
           <thead>
             <tr>
-              <th>BIBCODE</th>
-              <th>PARTITION</th>
-              <th>NAME</th>
-              <th>ST</th>
+              <th>REFERENCE</th>
+              <th>JOURNAL</th>
+              <th>TITLE</th>
+              <th>STATUS</th>
               <th>YEAR</th>
               <th>AUTHORS</th>
               <th>CITE</th>
@@ -142,7 +159,7 @@ layout: default
               <td class="jobid">{{ pub.bibcode }}</td>
               <td class="part">{{ part | truncate: 12, '' }}</td>
               <td class="name"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.short_title }}</a></td>
-              <td>{% if pub.status == 'preprint' %}<span class="st r">R</span>{% else %}<span class="st cd">CD</span>{% endif %}</td>
+              <td>{% if pub.status == 'preprint' %}<span class="st r">preprint</span>{% else %}<span class="st cd">published</span>{% endif %}</td>
               <td class="year">{{ pub.year }}</td>
               <td class="auth">{{ pub.authors }}</td>
               <td class="cite">{% if pub.bibcode %}<a href="https://ui.adsabs.harvard.edu/abs/{{ pub.bibcode | url_encode }}/exportcitation" target="_blank" rel="noopener" title="export citation (BibTeX / AASTeX) from ADS">bibtex</a>{% else %}&mdash;{% endif %}</td>
@@ -151,7 +168,7 @@ layout: default
           </tbody>
         </table>
       </div>
-      <div class="tally"># {{ site.data.publications | size }} jobs listed &mdash; ST: <span class="st cd">CD</span> completed (published), <span class="st r">R</span> running (preprint). <span class="cite-eg">bibtex</span> exports each citation from ADS. full record: <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3356-880X&sort=date+desc" target="_blank" rel="noopener">ADS</a></div>
+      <div class="tally"># {{ site.data.publications | size }} papers listed. <span class="cite-eg">bibtex</span> exports a citation from the Astrophysics Data System. <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3356-880X&sort=date+desc" target="_blank" rel="noopener">View my complete publication record</a>.</div>
     </div>
   </section>
 
@@ -191,7 +208,7 @@ layout: default
           <span class="dot" style="background:#27c93f"></span>
           <span style="margin-left:4px">kh2d_final.mp4 &mdash; rendered with SIMBI</span>
         </div>
-        <video width="620" height="480" controls preload="metadata">
+        <video width="1100" height="1000" controls preload="metadata">
           <source src="/assets/images/movies/kh_2048.mp4#t=0.1" type="video/mp4">
         </video>
       </div>
