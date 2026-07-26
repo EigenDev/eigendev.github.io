@@ -13,6 +13,7 @@ __pycache__/
 .pytest_cache/
 
 
+.DS_Store
 *.md
 
 # design inspiration, local only
