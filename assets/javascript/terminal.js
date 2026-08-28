@@ -44,6 +44,15 @@
     });
   }
 
+  // Make the visual external-link cue explicit to assistive technology too.
+  Array.prototype.forEach.call(document.querySelectorAll('a[target="_blank"]'), function (link) {
+    if (link.querySelector(".new-tab-note")) return;
+    var note = document.createElement("span");
+    note.className = "sr-only new-tab-note";
+    note.textContent = " (opens in a new tab)";
+    link.appendChild(note);
+  });
+
   // -- live clock + year -----------------------------------------------------
   var clock = document.getElementById("clock");
   var year = document.getElementById("year");
