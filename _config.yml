@@ -21,7 +21,9 @@
 title: Marcus DuPont
 email: marcus.duponr@princeton.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal website for computational astrophysicist, Marcus DuPont
+  Marcus DuPont — computational astrophysicist exploring fluids, plasmas, waves,
+  and gravity through mathematical theory and simulation, from planetary atmospheres
+  to compact objects and the early universe.
 domain: eigendev.github.io
 url: https://eigendev.github.io
 #baseurl: "eigendev.github.io" # the subpath of your site, e.g. /blog
